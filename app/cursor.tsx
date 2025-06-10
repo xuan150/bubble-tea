@@ -8,9 +8,8 @@ export function MagicCursor() {
     const move = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY })
     }
-    // @ts-ignore
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     window.addEventListener('mousemove', move)
-    // @ts-ignore
     return () => window.removeEventListener('mousemove', move)
   }, [])
 
